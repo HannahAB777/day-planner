@@ -26,14 +26,14 @@ th{
   
 }
 .past{
-  background-color: #db9494;
+  background-color: #d3d3d3;
 }
 
 .current{
   background-color: #ff6961;
 }
 .future{
-  background-color: greenyellow;
+  background-color: #77dd77;
 }
 .btn{
   width: 100%;
@@ -73,21 +73,6 @@ th{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-}
-
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
 }
 
 .saveBtn {
