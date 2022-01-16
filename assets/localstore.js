@@ -1,4 +1,5 @@
-var nineTask = $("#input1");
+    //grabbing text input from localstorage using the time stamp as a key
+    var nineTask = $("#input1");
     var nineText =localStorage.getItem("09");
     nineTask.val(nineText);
 
@@ -30,6 +31,6 @@ var nineTask = $("#input1");
     var fourText =localStorage.getItem("16");
     fourTask.val(fourText);
 
-    var fiveTask = $("#input3");
+    var fiveTask = $("#input9");
     var fiveText =localStorage.getItem("17");
     fiveTask.val(fiveText);

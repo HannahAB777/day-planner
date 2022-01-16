@@ -1,28 +1,17 @@
 
 function onReady() {
-
+    
+    //create a time/day tracker that starts when the page loads 
     const timeElement = $("#currentDay");
     const currentDay = moment().format("dddd MMMM Do");
     let currentTime = moment().format("HH");
     currentTime = Number(currentTime);
-
-    //create a time/day tracker that starts when the page loads 
+    
     function setTime() {
         timeElement.text(currentDay);
         //insert date into the header
         //console.log(currentTime);
     }
-
-    var nineTask = $("#input1");
-    var nineText =localStorage.getItem("09");
-    console.log(nineTask);
-    nineTask.val(nineText);
-
-    
-    var nineTask = $("#input1");
-    var nineText =localStorage.getItem("09");
-    console.log(nineTask);
-    nineTask.val(nineText);
 
     function colourChange() {
         // target all the row 
@@ -31,8 +20,6 @@ function onReady() {
 
         // loop thru these rows
         rows.each(function (i, row) {
-            //console.log(i); // i is the index of the element
-            //console.log(row); // row element
             // for each row we will run the time check
 
             // grab the data-hour attr
@@ -63,6 +50,7 @@ function onReady() {
         });
 
     }
+    //running a time and colour check every second
     setInterval(function () {
         setTime();
         colourChange();
@@ -70,7 +58,7 @@ function onReady() {
     }, 1000);
 
     const savebtn = $(".save");
-
+//click to save task text to local storage
     savebtn.on("click", function (event) {
 
         const jButton = $(event.target);
@@ -80,19 +68,7 @@ function onReady() {
         const timeOfTask = jButtonCol.prev(".task");
         const timeOfTaskVal = timeOfTask.data("hour");
      
-
-        localStorage.setItem(timeOfTaskVal, textInput);
-        console.log(localStorage);
-     
-
+        localStorage.setItem(timeOfTaskVal, textInput);    
     });
-
-
-    //get value from input
-
-    //save it with get
-
-    //set text content of task
-
 }
 $(onReady);
